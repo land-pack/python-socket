@@ -7,3 +7,11 @@ except socket.error,msg:
 	sys.exit();
 print 'Socket Created'
 
+host = 'www.baidu.com'
+try:
+        remote_ip = socket.gethostbyname(host)
+except socket.gaierror:
+        print 'Hostname could not be resolved. Exiting'
+        sys.exit()
+
+print 'Ip address of ' + host + 'is' + remote_ip
