@@ -30,3 +30,5 @@ except socket.error:
 	sys.exit()
 print 'Message send success fully'
 
+reply = s.recv(4096)
+print reply
