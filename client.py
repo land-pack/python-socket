@@ -21,3 +21,12 @@ s.connect((remote_ip,port))
 
 print 'Socket Connected to ' + host + ' on ip ' + remote_ip
 
+message = 'GET / HTTP/1.1\r\n\r\n'
+
+try:
+	s.sendall(message)
+except socket.error:
+	print 'Send failed'
+	sys.exit()
+print 'Message send success fully'
+
