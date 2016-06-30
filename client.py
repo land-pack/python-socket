@@ -8,6 +8,7 @@ except socket.error,msg:
 print 'Socket Created'
 
 host = 'www.baidu.com'
+port = 80
 try:
         remote_ip = socket.gethostbyname(host)
 except socket.gaierror:
@@ -15,3 +16,8 @@ except socket.gaierror:
         sys.exit()
 
 print 'Ip address of ' + host + 'is' + remote_ip
+
+s.connect((remote_ip,port))
+
+print 'Socket Connected to ' + host + ' on ip ' + remote_ip
+
